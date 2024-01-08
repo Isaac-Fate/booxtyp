@@ -1,4 +1,4 @@
-#import "../utils.typ": color-schema
+#import "../colors.typ": color-schema
 
 #let note(content) = {
   text(fill: color-schema.orange.primary)[

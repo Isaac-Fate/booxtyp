@@ -4,8 +4,8 @@
 #import "lemma.typ": lemma
 #import "corollary.typ": corollary
 
-// #import "proof.typ": proof
-// #import "solution.typ": solution
-// #import "example.typ": example
-// #import "exercise.typ": exercise
-// #import "note.typ": note
+#import "proof.typ": proof
+#import "solution.typ": solution
+#import "example.typ": example
+#import "exercise.typ": exercise
+#import "note.typ": note

@@ -1,6 +1,6 @@
 #import "colors.typ": color-schema
 #import "equation.typ": equation-counter
-#import "counters.typ": theorem-counter, definition-counter
+#import "counters.typ": theorem-counter, definition-counter, example-counter, exercise-counter
 
 #let chapter(body) = {
   // Add a page break
@@ -14,6 +14,8 @@
       let heading-numbers = counter(heading).at(loc)
       theorem-counter.update((..heading-numbers, 1))
       definition-counter.update((..heading-numbers, 1))
+      example-counter.update((..heading-numbers, 1))
+      exercise-counter.update((..heading-numbers, 1))
       equation-counter.update((..heading-numbers, 1))
     })
 
@@ -48,6 +50,8 @@
       let heading-numbers = counter(heading).at(loc)
       theorem-counter.update((..heading-numbers, 1))
       definition-counter.update((..heading-numbers, 1))
+      example-counter.update((..heading-numbers, 1))
+      exercise-counter.update((..heading-numbers, 1))
       equation-counter.update((..heading-numbers, 1))
     })
 

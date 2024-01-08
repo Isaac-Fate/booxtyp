@@ -1,4 +1,4 @@
-#import "lib.typ": *
+#import "../src/lib.typ": *
 
 #show figure.where(kind: "Theorem"): it => it.body
 #show figure.where(kind: "Proposition"): it => it.body
@@ -31,6 +31,10 @@
 
 #proof[
   #lorem(1000)
+]
+
+#example[
+  #lorem(100)
 ]
 
 #note[
