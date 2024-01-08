@@ -5,3 +5,5 @@
 #let definition-counter = counter("definition")
 #let example-counter = counter("example")
 #let exercise-counter = counter("exercise")
+
+#let equation-counter = counter("equation")

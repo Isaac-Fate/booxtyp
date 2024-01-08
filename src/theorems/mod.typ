@@ -3,7 +3,7 @@
 #import "proposition.typ": proposition
 #import "lemma.typ": lemma
 #import "corollary.typ": corollary
-#import "new-theorem-template.typ": theorem-state
+
 // #import "proof.typ": proof
 // #import "solution.typ": solution
 // #import "example.typ": example

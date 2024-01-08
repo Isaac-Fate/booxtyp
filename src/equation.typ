@@ -1,6 +1,4 @@
-#let equation-counter = counter("equation")
-#equation-counter.update((0, 0, 0))
-#let equation-state = state("equations", (heading-numbers: none))
+#import "counters.typ": equation-counter
 
 #let equation(body) = {
   set math.equation(numbering: "(1.1)")
@@ -10,25 +8,12 @@
       // Get heading numbers at current location
       let heading-numbers = counter(heading).at(loc)
 
-      // Reset equation counter if heading numbers have changed
-      // if equation-state.at(loc).heading-numbers != heading-numbers {
-      //   equation-counter.update((..heading-numbers, 0))
-      // }
-
-      // Update state
-      // equation-state.update((heading-numbers: heading-numbers))
-
       // Increment equation number
       equation-counter.step(level: 3)
 
       counter(math.equation).update(equation-counter.at(loc))
     })
 
-    // Update `counter(math.equation)`
-    // so that the euqation number will be properly displayed
-    locate(loc => {
-      // counter(math.equation).update(equation-counter.at(loc))
-    })
     // Equation content
     it
   }

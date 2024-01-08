@@ -1,6 +1,6 @@
 #import "colors.typ": color-schema
 #import "equation.typ": equation-counter
-#import "counters.typ": theorem-counter
+#import "counters.typ": theorem-counter, definition-counter
 
 #let chapter(body) = {
   // Add a page break
@@ -13,6 +13,7 @@
     locate(loc => {
       let heading-numbers = counter(heading).at(loc)
       theorem-counter.update((..heading-numbers, 1))
+      definition-counter.update((..heading-numbers, 1))
       equation-counter.update((..heading-numbers, 1))
     })
 
@@ -46,6 +47,7 @@
     locate(loc => {
       let heading-numbers = counter(heading).at(loc)
       theorem-counter.update((..heading-numbers, 1))
+      definition-counter.update((..heading-numbers, 1))
       equation-counter.update((..heading-numbers, 1))
     })
 

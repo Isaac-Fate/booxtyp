@@ -1,16 +1,10 @@
 #import "../colors.typ": color-schema
 #import "../counters.typ": theorem-counter
 
-/// Define a new theorem-like state.
-#let new-theorem-state(key) = state(key, (heading-numbers: none, theorem-number: none))
-
-/// The theorem state.
-#let theorem-state = new-theorem-state("theorem")
-
 /// Create a new theorem-like template.
 #let new-theorem-template(
   identifier,
-  theorem-state: theorem-state,
+  theorem-counter: theorem-counter,
   fill: color-schema.blue.light,
   stroke: color-schema.blue.primary,
 ) = (body, title: none) => {
@@ -48,7 +42,7 @@
       // Theorem content
       #body
     ],
-    kind: "theorem",
+    kind: identifier,
     outlined: false,
     supplement: identifier,
     numbering: "1.1",
