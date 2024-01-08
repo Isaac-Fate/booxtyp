@@ -3,6 +3,10 @@
 #show figure.where(kind: "Theorem"): it => it.body
 #show figure.where(kind: "Proposition"): it => it.body
 #show figure.where(kind: "Definition"): it => it.body
+#show figure.where(kind: "Example"): it => it.body
+#show figure.where(kind: "Exercise"): it => it.body
+#show figure.where(kind: "Note"): it => it.body
+
 #show: book
 
 = Introduction
@@ -15,7 +19,30 @@
 
 @pro:1 is a very important proposition.
 
-== First Section
+== Theorems, Prompositions, lemmas, and Corollaries
+
+#theorem[
+  #lorem(50)
+]
+
+#proof[
+  #lorem(200)
+]
+
+#theorem(
+  title: "Rank-Nullity Theorem",
+)[
+  Let $T: V -> W$ be a linear map between two finite-dimensional vector spaces.
+  Then
+  $ dim(V) = dim(ker(T)) + dim(im(T)) $
+]
+
+== Definitions
+
+#definition[
+  The number $e$ is defined as
+  $ e := sum_(n = 0)^oo 1 / n! $
+]
 
 #definition[
   The exponential function, denoted by $exp(x)$, is defined as
@@ -23,6 +50,17 @@
 ]<def:1>
 
 @eq:1 is a very important equation.
+
+== Exercises and Solutions
+
+#exercise[
+  Solve the following differential equation with initial conditions $y(0) = 0$ and $y'(0) = 1$:
+  $ y'' + y = 0 $
+]<ex:1>
+
+#solution[
+  The solution is $y(x) = sin(x)$.
+]
 
 #theorem(title: "Important theorem")[
   This is a theorem.
@@ -47,7 +85,7 @@
 
 #exercise[
   This is an exercise.
-]
+]<ex:1>
 
 #exercise[
   This is an exercise.
