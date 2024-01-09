@@ -77,10 +77,12 @@ is a very important equation.
   $ exp(x) := sum_(n = 0)^oo x^n / n! $
 ]
 
-We say that a linear operator $T: V -> W$ is #index[self-adjoint] if it equals
-to its own adjoint, i.e., if $T^* = T$.
+We say that a linear operator $T: V -> W$ is #index(entry: [Self-Adjoint Operators])[self-adjoint] if
+it equals to its own adjoint, i.e., if $T^* = T$.
 
-= Indicies
+= Basics
+
+#heading(numbering: none)[Indices]
 
 #columns(2)[
   #make-index()

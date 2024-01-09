@@ -17,7 +17,15 @@
   class: classes.simple,
 ) ={
   locate(
-    loc => [#metadata((class: class, content: content, location: loc.position()))<jkrb_index>],
+    loc => {
+      // Override the content with the entry text if provided
+      let content = if entry != none { entry } else { content }
+
+      // Convert the content to lowercase
+      // let content = lower(content)
+
+      [#metadata((class: class, content: content, location: loc.position()))<jkrb_index>]
+    },
   )
   [
     *#content*

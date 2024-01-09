@@ -3,8 +3,8 @@
 #import "counters.typ": theorem-counter, definition-counter, example-counter, exercise-counter
 
 #let chapter-rules(body) = {
-  // Handle level 1 outlined headings
-  show heading.where(level: 1, outlined: true): it => {
+  // Handle level 1 headings with numbering "1.1"
+  show heading.where(level: 1, numbering: "1.1"): it => {
     // Add a page break
     // Do not add a page break if the chapter is the first one
     // or the previous page is already blank
@@ -38,8 +38,8 @@
     v(1.7em)
   }
 
-  // Handle level 1 non-outlined headings
-  show heading.where(level: 1, outlined: false): it => {
+  // Handle level 1 headings without numbering
+  show heading.where(level: 1, numbering: none): it => {
     // Add a page break
     // Do not add a page break if the chapter is the first one
     // or the previous page is already blank

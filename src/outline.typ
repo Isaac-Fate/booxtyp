@@ -12,7 +12,7 @@
       weight: "bold",
       size: 12pt,
       fill: color-schema.blue.dark,
-    )[Chapter #smallcaps(it)]
+    )[#smallcaps(it)]
   }
 
   // The rest of the document
