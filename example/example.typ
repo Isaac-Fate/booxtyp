@@ -50,10 +50,14 @@
 #exercise[
   Solve the following differential equation with initial conditions $y(0) = 0$ and $y'(0) = 1$:
   $ y'' + y = 0 $
-]<ex:1>
+]
 
 #solution[
   The solution is $y(x) = sin(x)$.
+]
+
+#exercise[
+
 ]
 
 #example[

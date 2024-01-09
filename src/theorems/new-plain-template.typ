@@ -30,7 +30,7 @@
             text(fill: title-color)[ *#identifier* ]
           } // Add some space
           #h(0.5em) // Main content
-          #text(style: body-text-style)[#body],
+          #text(style: body-text-style)[#body]
         ],
         kind: identifier,
         supplement: identifier,
