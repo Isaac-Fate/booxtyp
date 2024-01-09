@@ -8,6 +8,8 @@
     #h(0.5em)
     // Main content of the proof
     #content
+    // Start a new line
+    #parbreak()
     // Push the following square to the end of the lines
     #h(1fr)
     // A filled square at the end indicating the end of the proof, Q.E.D.

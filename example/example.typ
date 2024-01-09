@@ -9,6 +9,8 @@
 
 #show: book
 
+#pagebreak()
+
 = Introduction
 
 @thm:5 is a very important theorem.
@@ -29,12 +31,23 @@
   #lorem(200)
 ]
 
+#theorem(title: "Fermat's Last Theorem")[
+  No three positive integers $a$, $b$, and $c$ can satisfy the equation
+  $ a^n + b^n = c^n $
+  for any integer value of $n$ greater than $2$.
+]
+
+#proof[
+  I have discovered a truly marvelous proof of this, which this margin is too
+  narrow to contain.
+]
+
 #theorem(
   title: "Rank-Nullity Theorem",
 )[
   Let $T: V -> W$ be a linear map between two finite-dimensional vector spaces.
   Then
-  $ dim(V) = dim(ker(T)) + dim(im(T)) $
+  $ dim V = dim ker T + dim im T $
 ]
 
 == Definitions
@@ -87,14 +100,6 @@
   This is an exercise.
 ]<ex:1>
 
-#exercise[
-  This is an exercise.
-]
-
-#solution[
-  This is the solution.
-]
-
 #proposition(title: "Important theorem ")[
   This is a theorem.
   $ e^x = lim_(n -> oo) a $
@@ -112,10 +117,6 @@
 
 @eq:1 is a very important equation.
 
-== Second Section
-
-$ T: V -> W $
-
 $ T: V -> W $<eq:1>
 
 #definition[
@@ -123,3 +124,6 @@ $ T: V -> W $<eq:1>
   $ exp(x) := sum_(n = 0)^oo x^n / n! $
 ]
 
+= Second Chapter
+
+= Third Chapter

@@ -3,12 +3,12 @@
 #import "counters.typ": theorem-counter, definition-counter, example-counter, exercise-counter
 
 #let chapter(body) = {
-  // Add a page break
-  // Do not add a page break if the chapter is the first one
-  // or the previous page is already blank
-  pagebreak(weak: true)
-
   show heading.where(level: 1): it => {
+    // Add a page break
+    // Do not add a page break if the chapter is the first one
+    // or the previous page is already blank
+    pagebreak(weak: true)
+
     // Reset counters
     locate(loc => {
       let heading-numbers = counter(heading).at(loc)
