@@ -2,6 +2,8 @@
 
 #show: book
 
+#outline()
+
 = Introduction
 
 == Theorems, Prompositions, lemmas, and Corollaries
