@@ -1,25 +1,8 @@
 #import "../src/lib.typ": *
 
-#show figure.where(kind: "Theorem"): it => it.body
-#show figure.where(kind: "Proposition"): it => it.body
-#show figure.where(kind: "Definition"): it => it.body
-#show figure.where(kind: "Example"): it => it.body
-#show figure.where(kind: "Exercise"): it => it.body
-#show figure.where(kind: "Note"): it => it.body
-
 #show: book
 
-#pagebreak()
-
 = Introduction
-
-@thm:5 is a very important theorem.
-
-@def:1 is the definition of the exponential function.
-
-@def:2 is the definition of the exponential function.
-
-@pro:1 is a very important proposition.
 
 == Theorems, Prompositions, lemmas, and Corollaries
 
@@ -62,8 +45,6 @@
   $ exp(x) := sum_(n = 0)^oo x^n / n! $
 ]<def:1>
 
-@eq:1 is a very important equation.
-
 == Exercises and Solutions
 
 #exercise[
@@ -75,15 +56,6 @@
   The solution is $y(x) = sin(x)$.
 ]
 
-#theorem(title: "Important theorem")[
-  This is a theorem.
-  $ e^x = lim_(n -> oo) a $
-]
-
-#proof[
-  #lorem(1000)
-]
-
 #example[
   #lorem(100)
 ]
@@ -92,38 +64,19 @@
   Hmmm... I wonder if this is true.
 ]
 
-#exercise[
-
-  This is an exercise.]
-
-#exercise[
-  This is an exercise.
-]<ex:1>
-
-#proposition(title: "Important theorem ")[
-  This is a theorem.
-  $ e^x = lim_(n -> oo) a $
-]<pro:1>
-
-#definition[
-  The exponential function, denoted by $exp(x)$, is defined as
-  $ exp(x) := sum_(n = 0)^oo x^n / n! $
-]<def:2>
-
-#theorem(title: "Important theorem ")[
-  This is a theorem.
-  $ e^x = lim_(n -> oo) a $
-]<thm:5>
-
-@eq:1 is a very important equation.
-
-$ T: V -> W $<eq:1>
+is a very important equation.
 
 #definition[
   The exponential function, denoted by $exp(x)$, is defined as
   $ exp(x) := sum_(n = 0)^oo x^n / n! $
 ]
 
-= Second Chapter
+We say that a linear operator $T: V -> W$ is #index[self-adjoint] if it equals
+to its own adjoint, i.e., if $T^* = T$.
 
-= Third Chapter
+= Indicies
+
+#columns(2)[
+  #make-index()
+]
+

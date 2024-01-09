@@ -1,6 +1,6 @@
 #import "counters.typ": equation-counter
 
-#let equation(body) = {
+#let equation-rules(body) = {
   set math.equation(numbering: "(1.1)")
 
   show math.equation.where(block: true): it => {
