@@ -2,6 +2,40 @@
 
 #show: book
 
+#let cover(title, authors: ()) = {
+  // Set page
+  set page(margin: (x: 0pt, y: 0pt))
+
+  // Cover image
+  image("coffee.jpg", width: 100%, height: 40%)
+
+  // Remove the whitespace between the image and the rectangle
+  v(-14pt)
+
+  // Rectangle
+  rect(width: 100%, height: 10%, fill: color-schema.orange.primary)
+
+  block(inset: 12pt)[
+    // Book title
+    #text(weight: "extrabold", size: 32pt)[
+      #title
+    ]
+
+    // Some space
+    #v(12pt)
+
+    // Authors
+    #text(weight: "bold", size: 16pt, fill: color-schema.gray.primary)[
+      #authors.join(v(0pt))
+    ]
+  ]
+
+  // Reset page counter
+  counter(page).update(0)
+}
+
+#cover([My Book], authors: ("Isaac Fei",))
+
 #outline()
 
 = Introduction
@@ -80,11 +114,108 @@ is a very important equation.
 We say that a linear operator $T: V -> W$ is #index(entry: [Self-Adjoint Operators])[self-adjoint] if
 it equals to its own adjoint, i.e., if $T^* = T$.
 
+#lorem(200)
+
 = Basics
+
+#lorem(10)
+
+= A
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+
+= B
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
+== #lorem(5)
 
 #heading(numbering: none)[Indices]
 
 #columns(2)[
   #make-index()
 ]
-
