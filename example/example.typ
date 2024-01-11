@@ -2,39 +2,7 @@
 
 #show: book
 
-#let cover(title, authors: ()) = {
-  // Set page
-  set page(margin: (x: 0pt, y: 0pt))
-
-  // Cover image
-  image("coffee.jpg", width: 100%, height: 40%)
-
-  // Remove the whitespace between the image and the rectangle
-  v(-14pt)
-
-  // Rectangle
-  rect(width: 100%, height: 10%, fill: color-schema.orange.primary)
-
-  block(inset: 12pt)[
-    // Book title
-    #text(weight: "extrabold", size: 32pt)[
-      #title
-    ]
-
-    // Some space
-    #v(12pt)
-
-    // Authors
-    #text(weight: "bold", size: 16pt, fill: color-schema.gray.primary)[
-      #authors.join(v(0pt))
-    ]
-  ]
-
-  // Reset page counter
-  counter(page).update(0)
-}
-
-#cover([My Book], authors: ("Isaac Fei",))
+#cover([My Book], image("coffee.jpg"), authors: ("Isaac Fei",))
 
 #outline()
 

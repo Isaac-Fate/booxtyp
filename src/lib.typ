@@ -1,6 +1,9 @@
 // Colors
 #import "colors.typ": color-schema
 
+// Cover
+#import "cover.typ": cover
+
 // Theorems, definitions, examples, etc.
 #import "theorems/mod.typ": *
 
