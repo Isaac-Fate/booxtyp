@@ -8,10 +8,20 @@
     v(12pt, weak: true)
 
     // Entry style
-    text(weight: "bold", size: 12pt, fill: color-schema.blue.dark)[
-      Chapter
-      #smallcaps(it)
-    ]
+    // If the entry refers to a numbered chapter
+    // then show "Chapter" at the beginning of the entry
+    if it.element.numbering == "1.1" {
+      text(weight: "bold", size: 12pt, fill: color-schema.blue.dark)[
+        Chapter
+        #smallcaps(it)
+      ]
+    } else {
+      // If the entry refers to an unnumbered chapter
+      // then only show the title
+      text(weight: "bold", size: 12pt, fill: color-schema.blue.dark)[
+        #smallcaps(it)
+      ]
+    }
   }
 
   show outline: it => {

@@ -1,6 +1,11 @@
 #import "colors.typ": color-schema
 
-#let cover(title, image-content, authors: ()) = {
+#let cover(
+  title,
+  image-content,
+  authors: (),
+  bar-color: color-schema.orange.primary,
+) = {
   // Set page
   set page(margin: (x: 0pt, y: 0pt))
 
@@ -12,7 +17,7 @@
   v(-14pt)
 
   // Rectangle
-  rect(width: 100%, height: 10%, fill: color-schema.orange.primary)
+  rect(width: 100%, height: 10%, fill: bar-color)
 
   block(inset: 12pt)[
     // Book title

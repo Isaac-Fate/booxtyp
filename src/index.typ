@@ -42,7 +42,7 @@
   )
 }
 
-// Create the index page.
+/// Create the index page.
 #let make-index(title: none, outlined: false) = {
   // This function combines the text(s) of a content.
   let content-text(content) = {
@@ -96,7 +96,10 @@
           }
         })
 
-        #let firstCharacter = sk.first()
+        // The first character of the entry
+        // It should be uppercase
+        #let firstCharacter = upper(sk.first())
+
         #if firstCharacter != register {
           heading(level: 2, numbering: none, outlined: false, firstCharacter)
           register = firstCharacter

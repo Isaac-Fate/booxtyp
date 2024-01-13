@@ -79,7 +79,7 @@ is a very important equation.
   $ exp(x) := sum_(n = 0)^oo x^n / n! $
 ]
 
-We say that a linear operator $T: V -> W$ is #index(entry: [Self-Adjoint Operators])[self-adjoint] if
+We say that a linear operator $T: V -> W$ is #index(entry: [self-adjoint operators])[self-adjoint] if
 it equals to its own adjoint, i.e., if $T^* = T$.
 
 #lorem(200)
