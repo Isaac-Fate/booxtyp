@@ -1,6 +1,6 @@
 #import "colors.typ": color-schema
 #import "equation.typ": equation-counter
-#import "counters.typ": theorem-counter, definition-counter, example-counter, exercise-counter
+#import "counters.typ": figure-counter, theorem-counter, definition-counter, example-counter, exercise-counter
 
 #let chapter-rules(body) = {
   // Handle level 1 headings with numbering "1.1"
@@ -13,6 +13,7 @@
     // Reset counters
     locate(loc => {
       let heading-numbers = counter(heading).at(loc)
+      figure-counter.update((..heading-numbers, 1))
       theorem-counter.update((..heading-numbers, 1))
       definition-counter.update((..heading-numbers, 1))
       example-counter.update((..heading-numbers, 1))
@@ -72,6 +73,7 @@
     // Reset counters
     locate(loc => {
       let heading-numbers = counter(heading).at(loc)
+      figure-counter.update((..heading-numbers, 1))
       theorem-counter.update((..heading-numbers, 1))
       definition-counter.update((..heading-numbers, 1))
       example-counter.update((..heading-numbers, 1))

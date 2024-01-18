@@ -8,21 +8,25 @@
 
 = Introduction
 
+== Images
+
+@fig:1 is a cup of coffee.
+
+#figure(image("coffee.jpg"), caption: "A cup of coffee")<fig:1>
+
+#figure(image("coffee.jpg"), caption: "Another cup of coffee")
+
+hello,
+
 == Theorems, Prompositions, lemmas, and Corollaries
 
-#theorem[
-  #lorem(50)
-]
-
-#proof[
-  #lorem(200)
-]
+@thm:1 is a very important equation.
 
 #theorem(title: "Fermat's Last Theorem")[
   No three positive integers $a$, $b$, and $c$ can satisfy the equation
   $ a^n + b^n = c^n $
   for any integer value of $n$ greater than $2$.
-]
+]<thm:1>
 
 #proof[
   I have discovered a truly marvelous proof of this, which this margin is too
@@ -60,127 +64,10 @@
   The solution is $y(x) = sin(x)$.
 ]
 
-#exercise[
-
-]
-
-#example[
-  #lorem(100)
-]
-
-#note[
-  Hmmm... I wonder if this is true.
-]
-
-is a very important equation.
-
-#definition[
-  The exponential function, denoted by $exp(x)$, is defined as
-  $ exp(x) := sum_(n = 0)^oo x^n / n! $
-]
-
 We say that a linear operator $T: V -> W$ is #index(entry: [self-adjoint operators])[self-adjoint] if
 it equals to its own adjoint, i.e., if $T^* = T$.
 
 #lorem(200)
-
-= Basics
-
-#lorem(10)
-
-= A
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-
-= B
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
-== #lorem(5)
 
 #heading(numbering: none)[Indices]
 

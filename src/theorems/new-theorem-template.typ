@@ -28,16 +28,21 @@
         theorem-counter.step(level: 3)
 
         // Set the theorem title
-        identifier
-        numbering("1.1", ..theorem-counter.at(loc))
-        if title != none [
-          #h(1pt)
-          (#title)
+        [
+          #identifier
+          #numbering("1.1", ..theorem-counter.at(loc))
+          #if title != none [
+            #h(1pt)
+            (#title)
+          ]
         ]
       })
 
       // Display theorem title
       #text(fill: stroke)[*#theorem-title*]
+
+      // Set paragraph
+      #set par(first-line-indent: 0pt)
 
       // Theorem content
       #body
@@ -45,7 +50,7 @@
     kind: identifier,
     outlined: false,
     supplement: identifier,
-    numbering: "1.1",
+    // numbering: "1.1",
   )
 }
 

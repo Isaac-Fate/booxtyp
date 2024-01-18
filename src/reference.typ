@@ -2,23 +2,24 @@
 
 #let reference(body) = {
   show ref: it => {
-    let eq = math.equation
+    // let eq = math.equation
+    let numbering-style = "1.1"
     let element = it.element
 
     if element == none {
       return it
     }
 
-    if element.func() == eq {
+    if element.func() == math.equation {
       // Override equation references
-      return numbering(element.numbering, ..equation-counter.at(element.location()))
+      return numbering(numbering-style, ..equation-counter.at(element.location()))
     }
 
     if element.func() == figure and element.kind == "Theorem" {
       // Override theorem references
       return [
         #element.supplement
-        #numbering(element.numbering, ..theorem-counter.at(element.location()))
+        #numbering(numbering-style, ..theorem-counter.at(element.location()))
       ]
     }
 
@@ -26,7 +27,7 @@
       // Override definition references
       return [
         #element.supplement
-        #numbering(element.numbering, ..definition-counter.at(element.location()))
+        #numbering(numbering-style, ..definition-counter.at(element.location()))
       ]
     }
 
@@ -34,7 +35,7 @@
       // Override example references
       return [
         #element.supplement
-        #numbering(element.numbering, ..example-counter.at(element.location()))
+        #numbering(numbering-style, ..example-counter.at(element.location()))
       ]
     }
 
@@ -42,7 +43,7 @@
       // Override exercise references
       return [
         #element.supplement
-        #numbering(element.numbering, ..exercise-counter.at(element.location()))
+        #numbering(numbering-style, ..exercise-counter.at(element.location()))
       ]
     }
 

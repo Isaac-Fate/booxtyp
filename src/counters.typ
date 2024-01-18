@@ -7,3 +7,5 @@
 #let exercise-counter = counter("exercise")
 
 #let equation-counter = counter("equation")
+
+#let figure-counter = counter("figure")
