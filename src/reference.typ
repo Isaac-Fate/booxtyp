@@ -23,6 +23,30 @@
       ]
     }
 
+    if element.func() == figure and element.kind == "Proposition" {
+      // Override proposition references
+      return [
+        #element.supplement
+        #numbering(numbering-style, ..theorem-counter.at(element.location()))
+      ]
+    }
+
+    if element.func() == figure and element.kind == "Lemma" {
+      // Override lemma references
+      return [
+        #element.supplement
+        #numbering(numbering-style, ..theorem-counter.at(element.location()))
+      ]
+    }
+
+    if element.func() == figure and element.kind == "Corollary" {
+      // Override corollary references
+      return [
+        #element.supplement
+        #numbering(numbering-style, ..theorem-counter.at(element.location()))
+      ]
+    }
+
     if element.func() == figure and element.kind == "Definition" {
       // Override definition references
       return [
