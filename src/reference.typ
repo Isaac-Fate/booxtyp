@@ -12,7 +12,7 @@
 
     if element.func() == math.equation {
       // Override equation references
-      return numbering(numbering-style, ..equation-counter.at(element.location()))
+      return numbering(element.numbering, ..equation-counter.at(element.location()))
     }
 
     if element.func() == figure and element.kind == "Theorem" {

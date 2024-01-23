@@ -5,7 +5,7 @@
     // The word "Proof" in italic
     #text(style: "italic", fill: color-schema.orange.primary)[*Proof*]
     // A small space between the word "Proof" and the main content
-    #h(0.5em)
+    #h(0.3em)
     // Main content of the proof
     #content
     // Start a new line
