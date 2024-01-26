@@ -24,7 +24,7 @@
       // Convert the content to lowercase
       // let content = lower(content)
 
-      [#metadata((class: class, content: content, location: loc.position()))<jkrb_index>]
+      [#metadata((class: class, content: content, location: loc.position(), loc: loc))<jkrb_index>]
     },
   )
   [
@@ -38,7 +38,7 @@
   class: classes.main,
 ) = {
   locate(
-    loc => [#metadata((class: class, content: content, location: loc.position()))<jkrb_index>],
+    loc => [#metadata((class: class, content: content, location: loc.position(), loc: loc))<jkrb_index>],
   )
 }
 
@@ -73,7 +73,12 @@
         }
 
         // Add the new page entry to the list.
-        let ent = (class: el.value.class, page: el.value.location.page)
+        // let ent = (class: el.value.class, page: el.value.location.page)
+        let ent = (
+          class: el.value.class,
+          page: el.value.location.page,
+          page-number: counter(page).at(el.value.loc).first(),
+        )
         if not words.at(ct).contains(ent) {
           words.at(ct).push(ent)
         }
@@ -92,7 +97,7 @@
           if en.class == classes.main {
             link((page: en.page, x: 0pt, y: 0pt))[#strong[#en.page]]
           } else {
-            link((page: en.page, x: 0pt, y: 0pt))[#str(en.page)]
+            link((page: en.page, x: 0pt, y: 0pt))[*#en.page-number*]
           }
         })
 
@@ -110,4 +115,14 @@
       ]
     },
   )
+}
+
+#let index-page(title: [Indices]) = {
+  // The title of the index page
+  heading(numbering: none)[#title]
+
+  // Two column-layout
+  columns(2)[
+    #make-index()
+  ]
 }

@@ -8,16 +8,6 @@
 
 = Introduction
 
-== Images
-
-@fig:1 is a cup of coffee.
-
-#figure(image("coffee.jpg"), caption: "A cup of coffee")<fig:1>
-
-#figure(image("coffee.jpg"), caption: "Another cup of coffee")
-
-hello,
-
 == Theorems, Prompositions, lemmas, and Corollaries
 
 @thm:1 is a very important equation.
@@ -67,10 +57,12 @@ hello,
 We say that a linear operator $T: V -> W$ is #index(entry: [self-adjoint operators])[self-adjoint] if
 it equals to its own adjoint, i.e., if $T^* = T$.
 
-#lorem(200)
+== Figures
 
-#heading(numbering: none)[Indices]
+@fig:1 is a cup of coffee.
 
-#columns(2)[
-  #make-index()
-]
+#figure(image("coffee.jpg"), caption: "A cup of coffee")<fig:1>
+
+#figure(image("coffee.jpg"), caption: "Another cup of coffee")
+
+#index-page()
