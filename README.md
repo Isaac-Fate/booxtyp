@@ -1,6 +1,6 @@
 # BooxTyp
 
-A Typst template for books.
+A Typst template for books. It is inspired by a LaTeX template [ElegantBook](https://github.com/ElegantLaTeX/ElegantBook).
 
 ## Example Document
 
