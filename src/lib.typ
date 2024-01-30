@@ -18,5 +18,5 @@
 // Book template
 #import "book.typ": book
 
-#import "counters.typ": theorem-counter
-
+// Preface
+#import "preface.typ": preface

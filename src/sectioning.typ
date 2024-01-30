@@ -84,10 +84,13 @@
     // Se the text style
     set text(fill: color-schema.blue.dark, size: 16pt)
 
+    // Add some space above the title
+    v(1.5em)
+
     it
 
     // Add some space below the title
-    v(1.7em)
+    v(1.0em)
   }
 
   // The rest of the document

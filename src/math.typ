@@ -6,6 +6,12 @@
 /// Imaginary part of a complex number.
 #let Im = math.op("Im")
 
+/// Diameter of a subset in a metric space.
+#let diam = math.op("diam")
+
+/// Length of a curve.
+#let len = math.op("length")
+
 // Inner product
 #let inprod(vec1, vec2) = {
   $lr(angle.l vec1, vec2 angle.r)$

@@ -50,7 +50,6 @@
     kind: identifier,
     outlined: false,
     supplement: identifier,
-    // numbering: "1.1",
   )
 }
 

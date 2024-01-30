@@ -4,6 +4,35 @@
 
 #cover([My Book], image("coffee.jpg"), authors: ("Isaac Fei",))
 
+#preface(
+  )[
+This is A Typst template for books.
+
+You can create a preface using `preface` template:
+
+```typ
+#preface()[
+  Your preface goes here...
+]
+```
+
+The preface chapter will not be numbered or outlined in the table of contnets.
+
+You may change the title of the preface:
+
+```typ
+#preface(title: [My Preface])[
+  Your preface goes here...
+]
+```
+
+I generated a long paragraph of lorem ipsum text below so that you can see the
+page number at the top of the page. Note that the page number is Roman numeral
+before the first chapter.
+
+#lorem(1500)
+]
+
 #outline()
 
 = Introduction
